@@ -1,0 +1,158 @@
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/awesome/fontawesome-webfont.eot');
+  src: url('../fonts/awesome/fontawesome-webfont.eot') format('embedded-opentype'), url('../fonts/awesome/fontawesome-webfont.woff2') format('woff2'), url('../awesome/fonts/fontawesome-webfont.woff') format('woff'), url('../awesome/fonts/fontawesome-webfont.ttf') format('truetype'), url('../fonts/awesome/fontawesome-webfont.svg') format('svg');
+  font-weight: normal;
+  font-style: normal
+}
+
+@font-face {
+  font-family: 'iconvtc';
+  src: url('../fonts/iconvtc/vtc.eot');
+  src: url('../fonts/iconvtc/vtc.eot') format('embedded-opentype'), url('../fonts/iconvtc/vtc.woff') format('woff'), url('../fonts/iconvtc/vtc.woff') format('woff'), url('../fonts/iconvtc/vtc.ttf') format('truetype'), url('../fonts/iconvtc/vtc.svg') format('svg');
+  font-weight: normal;
+  font-style: normal
+}
+
+@font-face {
+  font-family: 'miso';
+  src: url('../fonts/miso/miso-webfont.eot');
+  src: url('../fonts/miso/miso-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/miso/miso-webfont.woff2') format('woff2'), url('../fonts/miso/miso-webfont.woff') format('woff'), url('../fonts/miso/miso-webfont.ttf') format('truetype'), url('../fonts/miso/miso-webfont.svg#miso') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'misoregular';
+  src: url('../fonts/miso-regular/miso-regular-webfont.eot');
+  src: url('../fonts/miso-regular/miso-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/miso-regular/miso-regular-webfont.woff2') format('woff2'), url('../fonts/miso-regular/miso-regular-webfont.woff') format('woff'), url('../fonts/miso-regular/miso-regular-webfont.ttf') format('truetype'), url('../fonts/miso-regular/miso-regular-webfont.svg#misoregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'misobold';
+  src: url('../fonts/miso-bold/miso-bold-webfont.eot');
+  src: url('../fonts/miso-bold/miso-bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/miso-bold/miso-bold-webfont.woff2') format('woff2'), url('../fonts/miso-bold/miso-bold-webfont.woff') format('woff'), url('../fonts/miso-bold/miso-bold-webfont.ttf') format('truetype'), url('../fonts/miso-bold/miso-bold-webfont.svg#misobold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'misolight';
+  src: url('../fonts/miso-light/miso-light-webfont.eot');
+  src: url('../fonts/miso-light/miso-light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/miso-light/miso-light-webfont.woff2') format('woff2'), url('../fonts/miso-light/miso-light-webfont.woff') format('woff'), url('../fonts/miso-light/miso-light-webfont.ttf') format('truetype'), url('../fonts/miso-light/miso-light-webfont.svg#misolight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'hand';
+  src: url('../fonts/handsean/handsean-webfont.eot');
+  src: url('../fonts/handsean/handsean-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/handsean/handsean-webfont.woff2') format('woff2'), url('../fonts/handsean/handsean-webfont.woff') format('woff'), url('../fonts/handsean/handsean-webfont.ttf') format('truetype'), url('../fonts/handsean/handsean-webfont.svg#handsean') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.txt-blue {
+
+  color: #0079d7;
+}
+
+.txt-red {
+  color: #DD0021;
+}
+/********************************************************/
+                  /*  estilos header */
+/********************************************************/
+
+.title-header {
+  font-family: 'misobold';
+}
+.txt-header{
+padding: 10px 20px;
+}
+.form-servicios {
+padding: 10px 30px;
+}
+.form-servicios span {
+  background: #0079d7;
+}
+.form-servicios .icon-search {
+color: #fff;
+}
+/********************************************************/
+                  /*  estilos contenido */
+/********************************************************/
+.cont-servicios{
+    padding: 0 28px;
+}
+.no-pad {
+  padding: 0;
+}
+.img-servicio {
+  padding:0px 2.5px 5px;
+}
+.lista-menu{
+  display: none;
+}
+.item-menu {
+  font-size: 10px;
+  border-bottom: 1px gray solid;
+padding: 10px 0 ;
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+.item-menu{
+  color:
+}
+/*Desktop*/
+
+/*Desktop and md-lg Desktop 125+ 110+ 100+>25*/
+
+@media screen and (min-width: 992px) {
+  body {
+    /*background: red;*/
+  }
+}
+
+/*Tableta Mobile L Mobile M Mobile S Mobile 175+ 150+*/
+
+@media screen and (max-width: 992px) {
+  body {
+    /*background: yellow;*/
+  }
+}
+
+/*Mobile 200+*/
+
+@media screen and (max-width: 768px) {
+  body {
+    /*background: purple;*/
+  }
+}
+
+/*Mobile 250+*/
+
+@media screen and (max-width: 560px) {
+  body {
+    /*background: black;*/
+  }
+}
+
+/*Mobile 300+*/
+
+@media screen and (max-width: 480px) {
+  body {
+    /*background: brown;*/
+  }
+}
+
+/*Mobile 500+*/
+
+@media screen and (max-width:453px) {
+  body {
+    /*background: orange;*/
+  }
+}
