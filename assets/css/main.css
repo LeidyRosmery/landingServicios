@@ -120,8 +120,8 @@
 
 .item-menu {
   font-size: 10px;
-  border-bottom: 1px gray solid;
-  padding: 5px 0;
+  border-bottom: 1px #b3b3b3 solid;
+  padding: 10px 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -137,6 +137,7 @@
 
 .item-menu i {
   color: #0079d7;
+padding-right: 18px;
 }
 
 .title-item {
@@ -196,6 +197,7 @@
 
 ul {
   padding: 0;
+  background: #f2f2f2;
 }
 
 /*Desktop*/
@@ -272,6 +274,11 @@ ul {
   .img-servicio {
     height: 36vh;
   }
+
+  .item-menu {
+
+    padding: 20px 0;
+  }
 }
 
 /*Mobile 250+*/
@@ -279,6 +286,9 @@ ul {
 @media screen and (max-width: 560px) {
   .img-servicio {
     height: 32vh;
+  }
+  .item-menu {
+    padding: 10px 0;
   }
 }
 

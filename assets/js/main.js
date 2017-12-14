@@ -60,16 +60,15 @@ const genMenu = (array) => {
   const lista = $('<ul style="padding-left: 0;"></ul>');
   $.each(array, function(indice, elemento) {
     console.log(array.length);
-if(array.length-1==indice){
+    if (array.length - 1 == indice) {
 
-  const item = $(' <li class="item-menu" style="float:none"><span class="txt-menu" >' + elemento + '</span><i class="icon-arrow glyphicon glyphicon-chevron-right "></i></li>');
-lista.append(item);
-}
-else{
+      const item = $(' <li class="item-menu" ><span class="txt-menu" >' + elemento + '</span><i class="icon-arrow glyphicon glyphicon-chevron-right "></i></li>');
+      lista.append(item);
+    } else {
 
-  const item = $(' <li class="item-menu"><span class="txt-menu">' + elemento + '</span><i class="icon-arrow glyphicon glyphicon-chevron-right "></i></li>');
-lista.append(item);
-}
+      const item = $(' <li class="item-menu"><span class="txt-menu">' + elemento + '</span><i class="icon-arrow glyphicon glyphicon-chevron-right "></i></li>');
+      lista.append(item);
+    }
 
 
   });
@@ -123,13 +122,13 @@ $(".img-servicio").on("click", function() {
   } else {
     if ($(this).data('id') == current) {
       $(".img-servicio").removeClass('desactive-item');
-      $(".img-servicio").find('span').css('font-size','3em');
+      $(".img-servicio").find('span').css('font-size', '3em');
       $(".lista-menu").fadeOut('fast');
       $('.add').remove();
       $(".lista-menu").fadeIn('fast');
     } else {
-        $(".img-servicio").find('span').css('font-size','3em');
-      $(this).find('span').css('font-size','4.5em');
+      $(".img-servicio").find('span').css('font-size', '3em');
+      $(this).find('span').css('font-size', '4.5em');
       $(".img-servicio").addClass('desactive-item');
       $(this).removeClass('desactive-item');
       $(".lista-menu").fadeOut('fast');
