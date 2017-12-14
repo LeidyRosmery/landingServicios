@@ -48,7 +48,7 @@ $('.deco').data('categoria', deco);
 const genMenu = (array) => {
   const colLista = $('<div class="add col-xs-12 col-md-4 col-lg-4">');
   const contLista = $('<div class="lista-menu">');
-  const lista = $('<ul></ul>');
+  const lista = $('<ul style="padding-left: 0;"></ul>');
   $.each(array, function(indice, elemento) {
     const item = $(' <li class="item-menu"><span class="txt-menu">' + elemento + '</span><i class="glyphicon glyphicon-chevron-right"></i></li>');
     lista.append(item);
