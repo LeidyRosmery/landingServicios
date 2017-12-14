@@ -64,8 +64,18 @@ const activator = (valor) => {
   valor.find('span').css('display', 'none');
   valor.css('background', '#0079d7');
   $(".lista-menu").fadeIn('fast');
-  $('.col-cont:nth-child(2)').after(genMenu(valor.data('categoria')));
+  if(valor.data('id')==4 ||valor.data('id')==3){
+      $('.col-cont:nth-child(4)').after(genMenu(valor.data('categoria')));
+  }
+  if(valor.data('id')==1 ||valor.data('id')==2){
+      $('.col-cont:nth-child(2)').after(genMenu(valor.data('categoria')));
+  }
+  if(valor.data('id')==5 ||valor.data('id')==6){
+      $('.col-cont:nth-child(6)').after(genMenu(valor.data('categoria')));
+  }
+
 }
+
 
 const desactivator = (valor) => {
   valor.removeClass('active');
