@@ -11,19 +11,16 @@ const desactivator = (valor) => {
     valor.find('span').css('display', 'block');
     valor.css('background', '');
 }
-
+var current;
 $(".img-servicio").on("click", function() {
-  let valor = false;
-    if (valor == false) {
+    if ($(this).data('id') == current) {
+        desactivator($(this));
+    } else {
         desactivator($(".img-servicio"));
         activator($(this));
-        valor=true;
-    } else {
-        desactivator($(this));
-        valor=false;
     }
+    current = $(this).data('id');
 });
-
 
 
 
