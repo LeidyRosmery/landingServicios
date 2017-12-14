@@ -102,7 +102,6 @@
   padding: 0;
 }
 
-
 .img-servicio {
   padding: 0px 2.5px 5px;
   width: 100%;
@@ -111,9 +110,9 @@
   justify-content: center;
   align-items: center;
   background-repeat: no-repeat;
-background-size: cover;
+  background-size: cover;
+  cursor: pointer;
 }
-
 
 .item-menu {
   font-size: 10px;
@@ -137,8 +136,9 @@ background-size: cover;
   font-size: 1.2em;
   font-family: 'hand';
 }
+
 .col-cont {
-    padding: 3px 4px;
+  padding: 3px 4px;
 }
 
 .exterior {
@@ -165,27 +165,26 @@ background-size: cover;
   background-image: url(../img/b06.png);
 }
 
-.img-servicio img{
+.img-servicio img {
   display: none;
   width: 100%;
 }
- .img-servicio.active:before {
 
-    content: '';
-    position: absolute;
-    border-width: 8px;
-    border-color: #0072CE #fff #fff #fff;
-    bottom: -13px;
-    border-style: solid;
-    right: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    margin: 0 auto;
-
+.img-servicio.active:before {
+  content: '';
+  position: absolute;
+  border-width: 8px;
+  border-color: #0072CE #fff #fff #fff;
+  bottom: -13px;
+  border-style: solid;
+  right: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  margin: 0 auto;
 }
 
-ul{
+ul {
   padding: 0;
 }
 
@@ -194,18 +193,41 @@ ul{
 /*Desktop and md-lg Desktop 125+ 110+ 100+>25*/
 
 @media screen and (min-width: 992px) {
-  body {
-    /*background: red;*/
+  .item-menu {
+    border: #0079d7 2px solid;
+    color: #333;
+    width: 32.5%;
+    text-align: center;
+    display: inline-block;
+    padding: 22px;
+    margin: 4px;
+  }
+  .active-item {
+    background: #0079d7;
+    color: #fff;
+  }
+  .item-menu .txt-menu {
+    width: 95%;
+    font-size: 16px;
+    line-height: 21px;
+  }
+  ul {
+    text-align: center;
+  }
+  .icon-arrow {
+    display: none;
+  }
+  .add {
+    padding: 15px 0px;
+  }
+  .img-servicio {
+    height: 40vh;
   }
 }
 
 /*Tableta Mobile L Mobile M Mobile S Mobile 175+ 150+*/
 
-@media screen and (max-width: 992px) {
-  body {
-    /*background: yellow;*/
-  }
-}
+@media screen and (max-width: 992px) {}
 
 /*Mobile 200+*/
 

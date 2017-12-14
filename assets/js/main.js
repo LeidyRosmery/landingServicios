@@ -32,7 +32,16 @@ var puertas = [
 ];
 var deco = [
   "ARMADO DE MUEBLES ITALINEA",
-  "ARMADO DE MUEBLES: ROPEROS, CENTROS DE TV, ESCRITORIOS, SILLAS, LOCKERS, ZAPATERAS, ESTANTES, CÓMODAS, VELADORES, Y ESTANTES",
+  "ARMADO DE MUEBLES: ROPEROS ",
+  " ARMADO DE MUEBLES: CENTROS DE TV",
+  " ARMADO DE MUEBLES: ESCRITORIOS",
+  " ARMADO DE MUEBLES: SILLAS",
+  " ARMADO DE MUEBLES: LOCKERS",
+  " ARMADO DE MUEBLES: ZAPATERAS",
+  " ARMADO DE MUEBLES: ESTANTES",
+  " ARMADO DE MUEBLES: CÓMODAS",
+  " ARMADO DE MUEBLES: VELADORES",
+  "  ARMADO DE MUEBLES: ESTANTES",
   "INSTALACIÓN DE RACKS",
   "SERVICIO DE PINTURA LATEX INTERIOR Y EXTERIOR"
 ];
@@ -46,15 +55,16 @@ $('.deco').data('categoria', deco);
 
 
 const genMenu = (array) => {
-  const colLista = $('<div class="add col-xs-12 col-md-4 col-lg-4">');
+  const colLista = $('<div class="add col-xs-12 col-md-12 col-lg-12">');
   const contLista = $('<div class="lista-menu">');
   const lista = $('<ul style="padding-left: 0;"></ul>');
   $.each(array, function(indice, elemento) {
-    const item = $(' <li class="item-menu"><span class="txt-menu">' + elemento + '</span><i class="glyphicon glyphicon-chevron-right"></i></li>');
+    const item = $(' <li class="item-menu"><span class="txt-menu">' + elemento + '</span><i class="icon-arrow glyphicon glyphicon-chevron-right "></i></li>');
     lista.append(item);
   });
   contLista.append(lista);
   colLista.append(contLista);
+
   return colLista;
 }
 
@@ -66,8 +76,8 @@ const activator = (valor) => {
   $(".lista-menu").fadeIn('fast');
 
 
-}
 
+}
 
 const desactivator = (valor) => {
   valor.removeClass('active');
@@ -80,21 +90,38 @@ const desactivator = (valor) => {
 }
 var current;
 
+
 $(".img-servicio").on("click", function() {
+
   if ($(this).data('id') == current) {
     desactivator($(this));
   } else {
     desactivator($(".img-servicio"));
     activator($(this));
-    if($(this).data('id')==4 ||$(this).data('id')==3){
+    current = $(this).data('id');
+    /*code posicion list menu*/
+    if ($(window).width() < 993) {
+      if ($(this).data('id') == 4 || $(this).data('id') == 3) {
         $('.col-cont:nth-child(4)').after(genMenu($(this).data('categoria')));
-    }
-    if($(this).data('id')==1 ||$(this).data('id')==2){
+      }
+      if ($(this).data('id') == 1 || $(this).data('id') == 2) {
         $('.col-cont:nth-child(2)').after(genMenu($(this).data('categoria')));
-    }
-    if($(this).data('id')==5 ||$(this).data('id')==6){
+      }
+      if ($(this).data('id') == 5 || $(this).data('id') == 6) {
         $('.col-cont:nth-child(6)').after(genMenu($(this).data('categoria')));
+      }
+    } else {
+      if ($(this).data('id') == 4 || $(this).data('id') == 5 || $(this).data('id') == 6) {
+        $('.col-cont:nth-child(6)').after(genMenu($(this).data('categoria')));
+      }
+      if ($(this).data('id') == 1 || $(this).data('id') == 2 || $(this).data('id') == 3) {
+        $('.col-cont:nth-child(3)').after(genMenu($(this).data('categoria')));
+      }
     }
   }
-  current = $(this).data('id');
+
+  $('.item-menu').on('click', function() {
+    $('.item-menu').removeClass('active-item');
+    $(this).addClass('active-item');
+  });
 });
