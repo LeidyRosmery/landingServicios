@@ -109,6 +109,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-repeat: no-repeat;
+background-size: cover;
 }
 
 .lista-menu {
@@ -163,6 +165,26 @@
 
 .deco {
   background-image: url(../img/b06.png);
+}
+
+.img-servicio img{
+  display: none;
+  width: 100%;
+}
+ .img-servicio.active:before {
+
+    content: '';
+    position: absolute;
+    border-width: 8px;
+    border-color: #0072CE #fff #fff #fff;
+    bottom: -13px;
+    border-style: solid;
+    right: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    margin: 0 auto;
+
 }
 
 /*Desktop*/
