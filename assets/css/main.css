@@ -106,6 +106,7 @@
   padding: 0px 2.5px 5px;
   width: 100%;
   height: 21vh;
+  transition: all 1s;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -134,7 +135,7 @@
 .title-item {
   color: #fff;
   font-size: 1.2em;
-  font-family: 'hand';
+  font-family: 'misobold';
 }
 
 .col-cont {
@@ -142,27 +143,27 @@
 }
 
 .exterior {
-  background-image: url(../img/b01.jpg);
+  background-image: url(../img/foto1.png);
 }
 
 .electricidad {
-  background-image: url(../img/b02.jpg);
+  background-image: url(../img/foto2.png);
 }
 
 .pisos {
-  background-image: url(../img/b03.jpg);
+  background-image: url(../img/foto3.png);
 }
 
 .puertas {
-  background-image: url(../img/b04.png);
+  background-image: url(../img/foto4.png);
 }
 
 .cocina {
-  background-image: url(../img/b05.png);
+  background-image: url(../img/foto5.png);
 }
 
 .deco {
-  background-image: url(../img/b06.png);
+  background-image: url(../img/foto6.png);
 }
 
 .img-servicio img {
@@ -202,15 +203,28 @@ ul {
     padding: 22px;
     margin: 4px;
   }
-  .active-item {
-    background: #0079d7;
-    color: #fff;
+  .desactive-item {
+    filter:brightness(0.4);
   }
   .item-menu .txt-menu {
     width: 95%;
     font-size: 16px;
     line-height: 21px;
   }
+  .title-item {
+    font-size: 3em;
+  }
+  .txt-header {
+    padding: 50px 20px 16px;
+        font-size: 1.8em;
+        line-height: 1em;
+        /* color: blue; */
+  }
+  h4.txt-red.title-header {
+    font-size: 1.5em;
+    padding-top: 56px;
+    /* color: blue; */
+}
   ul {
     text-align: center;
   }
@@ -227,7 +241,13 @@ ul {
 
 /*Tableta Mobile L Mobile M Mobile S Mobile 175+ 150+*/
 
-@media screen and (max-width: 992px) {}
+@media screen and (max-width: 992px) {
+  .img-servicio {
+
+      height: 38vh;
+    }
+
+}
 
 /*Mobile 200+*/
 
@@ -235,28 +255,38 @@ ul {
   body {
     /*background: purple;*/
   }
+  .img-servicio {
+
+      height: 36vh;
+    }
 }
 
 /*Mobile 250+*/
 
 @media screen and (max-width: 560px) {
-  body {
-    /*background: black;*/
-  }
+  .img-servicio {
+
+      height: 32vh;
+    }
 }
 
 /*Mobile 300+*/
 
 @media screen and (max-width: 480px) {
-  body {
-    /*background: brown;*/
-  }
+  .img-servicio {
+
+      height: 27vh;
+    }
+
 }
 
 /*Mobile 500+*/
 
 @media screen and (max-width:453px) {
-  body {
-    /*background: orange;*/
-  }
+
+  .img-servicio {
+
+      height: 21vh;
+    }
+
 }
