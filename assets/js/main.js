@@ -74,9 +74,6 @@ const activator = (valor) => {
   valor.find('span').css('display', 'none');
   valor.css('background', '#0079d7');
   $(".lista-menu").fadeIn('fast');
-
-
-
 }
 
 const desactivator = (valor) => {
@@ -86,8 +83,8 @@ const desactivator = (valor) => {
   valor.css('background', '');
   $(".lista-menu").fadeOut('fast');
   $('.add').remove();
-
 }
+
 var current;
 
 
@@ -113,14 +110,16 @@ $(".img-servicio").on("click", function() {
       }
     }
   } else {
-
-
     if ($(this).data('id') == current) {
+      $(".img-servicio").removeClass('desactive-item');
+      $(".lista-menu").fadeOut('fast');
+      $('.add').remove();
+      $(".lista-menu").fadeIn('fast');
+    } else {
       $(".img-servicio").addClass('desactive-item');
       $(this).removeClass('desactive-item');
-    } else {
-      desactivator($(".img-servicio"));
-      activator($(this));
+      $(".lista-menu").fadeOut('fast');
+      $('.add').remove();
       current = $(this).data('id');
       if ($(this).data('id') == 4 || $(this).data('id') == 5 || $(this).data('id') == 6) {
         $('.col-cont:nth-child(6)').after(genMenu($(this).data('categoria')));
