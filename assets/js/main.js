@@ -131,6 +131,7 @@ $(".img-servicio").on("click", function() {
 
   }
   $('.item-menu').on('click', function() {
+    console.log("holisss");
     $('.item-menu').removeClass('active-item');
     $(this).addClass('active-item');
   });
