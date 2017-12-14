@@ -46,7 +46,7 @@ $('.deco').data('categoria', deco);
 
 
 const genMenu = (array) => {
-  const colLista = $('<div class=" col-xs-12 col-md-4 col-lg-4">');
+  const colLista = $('<div class="add col-xs-12 col-md-4 col-lg-4">');
   const contLista = $('<div class="lista-menu">');
   const lista = $('<ul></ul>');
   $.each(array, function(indice, elemento) {
@@ -64,15 +64,7 @@ const activator = (valor) => {
   valor.find('span').css('display', 'none');
   valor.css('background', '#0079d7');
   $(".lista-menu").fadeIn('fast');
-  if(valor.data('id')==4 ||valor.data('id')==3){
-      $('.col-cont:nth-child(4)').after(genMenu(valor.data('categoria')));
-  }
-  if(valor.data('id')==1 ||valor.data('id')==2){
-      $('.col-cont:nth-child(2)').after(genMenu(valor.data('categoria')));
-  }
-  if(valor.data('id')==5 ||valor.data('id')==6){
-      $('.col-cont:nth-child(6)').after(genMenu(valor.data('categoria')));
-  }
+
 
 }
 
@@ -83,7 +75,7 @@ const desactivator = (valor) => {
   valor.find('span').css('display', 'block');
   valor.css('background', '');
   $(".lista-menu").fadeOut('fast');
-  $('.lista-menu').empty();
+  $('.add').remove();
 
 }
 var current;
@@ -94,6 +86,15 @@ $(".img-servicio").on("click", function() {
   } else {
     desactivator($(".img-servicio"));
     activator($(this));
+    if($(this).data('id')==4 ||$(this).data('id')==3){
+        $('.col-cont:nth-child(4)').after(genMenu($(this).data('categoria')));
+    }
+    if($(this).data('id')==1 ||$(this).data('id')==2){
+        $('.col-cont:nth-child(2)').after(genMenu($(this).data('categoria')));
+    }
+    if($(this).data('id')==5 ||$(this).data('id')==6){
+        $('.col-cont:nth-child(6)').after(genMenu($(this).data('categoria')));
+    }
   }
   current = $(this).data('id');
 });
