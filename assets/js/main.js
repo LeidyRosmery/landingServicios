@@ -1,44 +1,41 @@
 var pisos = [
-  "Instalación de alfombra y/o tapizón",
-  "Instalación de cerámico y/o porcelanato",
   "Instalación de piso laminado",
-  "Instalación de piso Vinílico o lg"
-
+  "Instalación de piso Vinílico o lg",
+  "Instalación de alfombra y/o tapizón",
+  "Instalación de cerámico y/o porcelanato"
 ];
+
 var cocina = [
-
-  "Instalación de cabinas de ducha y columnas de duchas",
-  "Instalación de tendales de techo y pared",
-  "Instalación de aparatos sanitarios",
-  "Instalación de termas eléctricas",
   "Instalación de griferías",
+  "Instalación de campana",
   "Armado de estufas a gas",
-  "Instalación de campana"
-
-
+  "Instalación de termas eléctricas",
+  "Instalación de aparatos sanitarios",
+  "Instalación de tendales de techo y pared",
+  "Instalación de cabinas de ducha y columnas de duchas"
 ];
 var exterior = [
-  "Instalación de piscinas estructuradas",
-  "Armado de camas elásticas y trampolines",
-  "Armado de casas jardín - ergo bodega",
-  "Armado de parrillas a carbón",
   "Armado de pérgolas y toldos",
-  "Armado de parrilla a gas"
+  "Armado de parrilla a gas",
+  "Armado de parrillas a carbón",
+  "Armado de casas jardín - ergo bodega",
+  "Instalación de piscinas estructuradas",
+  "Armado de camas elásticas y trampolines"
 ];
 var electricidad = [
-  "Instalación de intercomunicadores y video porteros",
+  "Instalación básica de aires acondicionados",
   "Instalación de lámparas de techo y ventiladores",
-  "Instalación básica de aires acondicionados"
+  "Instalación de intercomunicadores y video porteros"
 ];
 var puertas = [
-  "Instalación de puertas de madera - interior y exterior",
+  "Instalación de cerraduras",
   "Instalación de persianas y cortinas",
-  "Instalación de cerraduras"
+  "Instalación de puertas internas y externas de madera"
 ];
 var deco = [
-  "Servicio de pintura Latex interior y exterior",
-  "Instalacion de mobiliario",
-  "Instalación de racks"
+  "Armado de mobiliario",
+  "Instalación de racks",
+  "Servicio de pintura Latex interior y exterior"
 ];
 
 $('.pisos').data('categoria', pisos);
