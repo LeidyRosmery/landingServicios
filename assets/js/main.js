@@ -1,49 +1,41 @@
 var pisos = [
-  "INSTALACIÓN DE ALFOMBRA O TAPIZÓN",
-  "INSTALACIÓN DE CERÁMICO Y/O PORCELANATO",
-  "INSTALACIÓN DE PISO LAMINADO",
-  "INSTALACIÓN DE PISO VINÍLICO O LG"
+  "Instalación de alfombra y/o tapizón",
+  "Instalación de cerámico y/o porcelanato",
+  "Instalación de piso laminado",
+  "Instalación de piso Vinílico o lg"
+
 ];
-var cocina = ['INSTALACIÓN DE GRIFERÍAS',
-  'INSTALACIÓN DE TERMAS ELÉCTRICAS',
-  'INSTALACIÓN DE CABINAS DE DUCHA Y COLUMNAS DE DUCHAS',
-  'INSTALACIÓN DE APARATOS SANITARIOS',
-  'INSTALACIÓN DE CAMPANA',
-  'INSTALACIÓN DE TENDALES DE TECHO Y PARED',
-  'ARMADO DE ESTUFAS A GAS'
+var cocina = [
+  "Instalación de griferías",
+  "Instalación de termas eléctricas",
+  "Instalación de cabinas de ducha y columnas de duchas",
+  "Instalación de aparatos sanitarios",
+  "Instalación de campana",
+  "Instalación de tendales de techo y pared",
+  "Armado de estufas a gas"
 ];
 var exterior = [
-  " INSTALACIÓN DE PISCINAS ESTRUCTURADAS",
-  " ARMADO DE CAMAS ELÁSTICAS Y TRAMPOLINES",
-  " ARMADO DE CASAS JARDÍN - ERGO BOGEDA",
-  " ARMADO DE PARRILLAS A CARBÓN",
-  " ARMADO DE PÉRGOLAS Y TOLDOS",
-  " ARMADO DE PARRILLA A GAS"
+  "Instalación de piscinas estructuradas",
+  "Armado de camas elásticas y trampolines",
+  "Armado de casas jardín - ergo bodega",
+  "Armado de parrillas a carbón",
+  "Armado de pérgolas y toldos",
+  "Armado de parrilla a gas"
 ];
 var electricidad = [
-  "INSTALACIÓN DE INTERCOMUNICADORES Y VIDEO PORTEROS",
-  "INSTALACIÓN BÁSICA DE AIRES ACONDICIONADOS",
-  "INSTALACIÓN DE LÁMPARAS DE TECHO Y VENTILADORES"
+  "Instalación de intercomunicadores y video porteros",
+  "Instalación básica de aires acondicionados",
+  "Instalación de lámparas de techo y ventiladores"
 ];
 var puertas = [
-  "INSTALACIÓN DE PUERTAS DE MADERA - INTERIOR Y EXTERIOR",
-  "INSTALACIÓN DE CERRADURAS",
-  "INSTALACIÓN DE PERSIANAS Y CORTINAS"
+  "Instalación de puertas de madera - interior y exterior",
+  "Instalación de cerraduras",
+  "Instalación de persianas y cortinas"
 ];
 var deco = [
-  "ARMADO DE MUEBLES ITALINEA",
-  "ARMADO DE MUEBLES: ROPEROS ",
-  " ARMADO DE MUEBLES: CENTROS DE TV",
-  " ARMADO DE MUEBLES: ESCRITORIOS",
-  " ARMADO DE MUEBLES: SILLAS",
-  " ARMADO DE MUEBLES: LOCKERS",
-  " ARMADO DE MUEBLES: ZAPATERAS",
-  " ARMADO DE MUEBLES: ESTANTES",
-  " ARMADO DE MUEBLES: CÓMODAS",
-  " ARMADO DE MUEBLES: VELADORES",
-  "  ARMADO DE MUEBLES: ESTANTES",
-  "INSTALACIÓN DE RACKS",
-  "SERVICIO DE PINTURA LATEX INTERIOR Y EXTERIOR"
+  "Armado de muebles italinea, roperos, centro de TV, escritorios, sillas, lockers, zapateras, estantes, cómodas, veladores, estantes",
+  "Instalación de racks",
+  "Servicio de pintura Latex interior y exterior"
 ];
 
 $('.pisos').data('categoria', pisos);
@@ -61,16 +53,12 @@ const genMenu = (array) => {
   $.each(array, function(indice, elemento) {
     console.log(array.length);
     if (array.length - 1 == indice) {
-
-      const item = $(' <li class="item-menu" ><span class="txt-menu" >' + elemento + '</span><i class="icon-arrow glyphicon glyphicon-chevron-right "></i></li>');
+      const item = $(' <li class="item-menu" style="float:none"><div class=cont-item><span class="txt-menu" >' + elemento + '</span><i class="icon-arrow glyphicon glyphicon-chevron-right "></i></div></li>');
       lista.append(item);
     } else {
-
-      const item = $(' <li class="item-menu"><span class="txt-menu">' + elemento + '</span><i class="icon-arrow glyphicon glyphicon-chevron-right "></i></li>');
+      const item = $(' <li class="item-menu"><div class=cont-item><span class="txt-menu">' + elemento + '</span><i class="icon-arrow glyphicon glyphicon-chevron-right "></i></div></li>');
       lista.append(item);
     }
-
-
   });
   contLista.append(lista);
   colLista.append(contLista);
@@ -80,8 +68,7 @@ const genMenu = (array) => {
 
 const activator = (valor) => {
   valor.addClass('active');
-  valor.find("img").css('display', 'block');
-  valor.find('span').css('display', 'none');
+  valor.find("img").css('display', 'inline');
   valor.css('background', '#0079d7');
   $(".lista-menu").fadeIn('fast');
 }
@@ -89,7 +76,6 @@ const activator = (valor) => {
 const desactivator = (valor) => {
   valor.removeClass('active');
   valor.find("img").css('display', 'none');
-  valor.find('span').css('display', 'block');
   valor.css('background', '');
   $(".lista-menu").fadeOut('fast');
   $('.add').remove();
@@ -140,20 +126,19 @@ $(".img-servicio").on("click", function() {
       if ($(this).data('id') == 1 || $(this).data('id') == 2 || $(this).data('id') == 3) {
         $('.col-cont:nth-child(3)').after(genMenu($(this).data('categoria')));
       }
+
+      $(document).ready(function() {
+        var heights = $(".item-menu").map(function() {
+            return $(this).height();
+          }).get(),
+          maxHeight = Math.max.apply(null, heights);
+        $(".item-menu").height(maxHeight);
+      });
+      $('.item-menu').on('click', function() {
+        console.log("holisss");
+        $('.item-menu').removeClass('active-item');
+        $(this).addClass('active-item');
+      });
     }
-
   }
-
-  $(document).ready(function() {
-    var heights = $(".item-menu").map(function() {
-        return $(this).height();
-      }).get(),
-      maxHeight = Math.max.apply(null, heights);
-    $(".item-menu").height(maxHeight);
-  });
-  $('.item-menu').on('click', function() {
-    console.log("holisss");
-    $('.item-menu').removeClass('active-item');
-    $(this).addClass('active-item');
-  });
 });

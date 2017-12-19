@@ -54,14 +54,11 @@
   font-style: normal;
 }
 
-.txt-blue {
+.txt-blue , .txt-blue-title {
   color: #0079d7;
-  font-size: 1.2em;
+  /* font-size: 1.2em; */
 }
 
-.txt-red {
-  color: #DD0021;
-}
 
 /********************************************************/
 
@@ -71,10 +68,13 @@
 
 .title-header {
   font-family: 'misobold';
+  font-size: 18px;
 }
 
 .txt-header {
-  padding: 10px 20px;
+padding: 30px 5px 15px;
+  font-size: 19px;
+  font-family: 'miso';
 }
 
 .form-servicios {
@@ -94,9 +94,16 @@
 /*  estilos contenido */
 
 /********************************************************/
-.add{
-      padding: 4px;
+.cont-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
+.add {
+  padding: 4px;
+}
+
 .cont-servicios {
   padding: 0 28px;
 }
@@ -106,11 +113,12 @@
 }
 
 .img-servicio {
-  padding: 0px 2.5px 5px;
+  padding: 0;
   width: 100%;
   height: 21vh;
   transition: all 1s;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-repeat: no-repeat;
@@ -129,15 +137,15 @@
 
 .item-menu .txt-menu {
   width: 95%;
-  padding-left: 18px;
-
-  font-family: 'miso';
-      font-size: 1.4em;
+  padding-left: 12px;
+  color: #333;
+  font-size: 14px;
 }
 
 .item-menu i {
   color: #0079d7;
-padding-right: 18px;
+  padding-right: 18px;
+  padding-left: 10px;
 }
 
 .title-item {
@@ -147,37 +155,42 @@ padding-right: 18px;
   transition: all 1s;
 }
 
+.txt-header p {
+  margin: 0;
+}
+
 .col-cont {
-  padding: 3px 4px;
+  padding: 3px;
 }
 
 .exterior {
-  background-image: url(../img/foto1.png);
+  background-image: url(../img/exteriors.png);
 }
 
 .electricidad {
-  background-image: url(../img/foto2.png);
+  background-image: url(../img/electricidadd.png);
 }
 
 .pisos {
-  background-image: url(../img/foto3.png);
+  background-image: url(../img/pisoss.png);
 }
 
 .puertas {
-  background-image: url(../img/foto4.png);
+  background-image: url(../img/puertas.png);
 }
 
 .cocina {
-  background-image: url(../img/foto5.png);
+  background-image: url(../img/cocinas.png);
 }
 
 .deco {
-  background-image: url(../img/foto6.png);
+  background-image: url(../img/mueblesydeco.png);
 }
 
 .img-servicio img {
   display: none;
-  width: 100%;
+  padding-bottom: 5px;
+  width: 35%;
 }
 
 .img-servicio.active:before {
@@ -223,25 +236,19 @@ ul {
     background: #0079d7;
     color: #fff;
   }
-  .item-menu .txt-menu {
-    width: 95%;
-    font-size: 16px;
-    transition: all 1s;
-    line-height: 21px;
-  }
+
   .title-item {
     font-size: 3em;
   }
-  .txt-header {
+  .txt-header  {
     padding: 50px 20px 16px;
-    font-size: 1.8em;
-    line-height: 1em;
-    /* color: blue; */
+        font-size: 21px;
+        margin: 0;
+        line-height: 30px;
   }
-  h4.txt-red.title-header {
+  h4.txt-blue-title.title-header {
     font-size: 1.5em;
     padding-top: 56px;
-    /* color: blue; */
   }
   ul {
     text-align: center;
@@ -255,6 +262,14 @@ ul {
   .img-servicio {
     height: 40vh;
   }
+  .item-menu .txt-menu {
+      width: 95%;
+      font-size: 16px;
+      transition: all 1s;
+      line-height: 21px;
+        padding: 0;
+    }
+
 }
 
 /*Tableta Mobile L Mobile M Mobile S Mobile 175+ 150+*/
@@ -274,9 +289,7 @@ ul {
   .img-servicio {
     height: 36vh;
   }
-
   .item-menu {
-
     padding: 20px 0;
   }
 }
