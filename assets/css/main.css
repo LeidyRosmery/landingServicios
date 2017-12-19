@@ -94,12 +94,7 @@ padding: 30px 5px 15px;
 /*  estilos contenido */
 
 /********************************************************/
-.cont-item{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
+
 .add {
   padding: 4px;
 }
@@ -192,7 +187,12 @@ padding: 30px 5px 15px;
   padding-bottom: 5px;
   width: 35%;
 }
-
+.cont-item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
 .img-servicio.active:before {
   content: '';
   position: absolute;
@@ -227,10 +227,17 @@ ul {
     padding: 25px 10px;
     float: left;
     margin: 4px;
+
     /* max-height: 66px; */
   }
   .desactive-item {
     filter: brightness(0.4);
+  }
+  .cont-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
   }
   .active-item {
     background: #0079d7;
