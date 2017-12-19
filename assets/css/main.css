@@ -257,6 +257,11 @@ ul {
   .col-cont {
     padding: 5px;
 }
+span.txt-blue.title-header.title-desktop {
+    padding: 0;
+    font-size: 24px;
+
+}
 /* .lista-menu {
     padding: 15px 0px;
 } */
@@ -303,13 +308,13 @@ ul {
     font-size: 3em;
   }
   .txt-header  {
-    padding: 50px 20px 16px;
+    padding: 50px 20px 50px;
         font-size: 21px;
         margin: 0;
         line-height: 30px;
   }
   h4.txt-blue-title.title-header {
-    font-size: 1.5em;
+    font-size: 1.9em;
     padding-top: 56px;
   }
   ul {
@@ -404,7 +409,7 @@ ul {
     height: 21vh;
   }
   .cont-img{
-    width: 50%;
+    width: 35%;
   }
   .title-item{
     font-size: 1.8em;
