@@ -1,39 +1,43 @@
 var pisos = [
-  "Instalación de alfombra y/o tapizón",
-  "Instalación de cerámico y/o porcelanato",
   "Instalación de piso laminado",
-  "Instalación de piso Vinílico o lg"
-
+  "Instalación de piso Vinílico o lg",
+  "Instalación de alfombra y/o tapizón",
+  "Instalación de cerámico y/o porcelanato"
 ];
+
 var cocina = [
   "Instalación de griferías",
-  "Instalación de termas eléctricas",
-  "Instalación de cabinas de ducha y columnas de duchas",
-  "Instalación de aparatos sanitarios",
   "Instalación de campana",
+  "Armado de estufas a gas",
+  "Instalación de termas eléctricas",
+  "Instalación de aparatos sanitarios",
   "Instalación de tendales de techo y pared",
-  "Armado de estufas a gas"
+  "Instalación de cabinas de ducha y columnas de duchas",
 ];
 var exterior = [
-  "Instalación de piscinas estructuradas",
-  "Armado de camas elásticas y trampolines",
-  "Armado de casas jardín - ergo bodega",
-  "Armado de parrillas a carbón",
+  "Armado de parrilla a gas",
   "Armado de pérgolas y toldos",
-  "Armado de parrilla a gas"
+  "Armado de parrillas a carbón",
+  "Armado de casas jardín - ergo bodega",
+  "Instalación de piscinas estructuradas",
+  "Armado de camas elásticas y trampolines"
+
+
+
+
 ];
 var electricidad = [
-  "Instalación de intercomunicadores y video porteros",
   "Instalación básica de aires acondicionados",
-  "Instalación de lámparas de techo y ventiladores"
+  "Instalación de lámparas de techo y ventiladores",
+  "Instalación de intercomunicadores y video porteros"
 ];
 var puertas = [
-  "Instalación de puertas de madera - interior y exterior",
   "Instalación de cerraduras",
-  "Instalación de persianas y cortinas"
+  "Instalación de persianas y cortinas",
+  "Instalación de puertas internas y externas de madera"
 ];
 var deco = [
-  "Armado de muebles italinea, roperos, centro de TV, escritorios, sillas, lockers, zapateras, estantes, cómodas, veladores, estantes",
+  "Armado de mobiliario",
   "Instalación de racks",
   "Servicio de pintura Latex interior y exterior"
 ];
