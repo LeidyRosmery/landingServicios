@@ -15,16 +15,12 @@ var cocina = [
   "Instalación de cabinas de ducha y columnas de duchas",
 ];
 var exterior = [
-  "Armado de parrilla a gas",
   "Armado de pérgolas y toldos",
+  "Armado de parrilla a gas",
   "Armado de parrillas a carbón",
   "Armado de casas jardín - ergo bodega",
   "Instalación de piscinas estructuradas",
   "Armado de camas elásticas y trampolines"
-
-
-
-
 ];
 var electricidad = [
   "Instalación básica de aires acondicionados",
