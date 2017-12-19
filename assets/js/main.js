@@ -6,13 +6,16 @@ var pisos = [
 
 ];
 var cocina = [
-  "Instalación de griferías",
-  "Instalación de termas eléctricas",
+
   "Instalación de cabinas de ducha y columnas de duchas",
-  "Instalación de aparatos sanitarios",
-  "Instalación de campana",
   "Instalación de tendales de techo y pared",
-  "Armado de estufas a gas"
+  "Instalación de aparatos sanitarios",
+  "Instalación de termas eléctricas",
+  "Instalación de griferías",
+  "Armado de estufas a gas",
+  "Instalación de campana"
+
+
 ];
 var exterior = [
   "Instalación de piscinas estructuradas",
@@ -24,18 +27,18 @@ var exterior = [
 ];
 var electricidad = [
   "Instalación de intercomunicadores y video porteros",
-  "Instalación básica de aires acondicionados",
-  "Instalación de lámparas de techo y ventiladores"
+  "Instalación de lámparas de techo y ventiladores",
+  "Instalación básica de aires acondicionados"
 ];
 var puertas = [
   "Instalación de puertas de madera - interior y exterior",
-  "Instalación de cerraduras",
-  "Instalación de persianas y cortinas"
+  "Instalación de persianas y cortinas",
+  "Instalación de cerraduras"
 ];
 var deco = [
-  "Armado de muebles italinea, roperos, centro de TV, escritorios, sillas, lockers, zapateras, estantes, cómodas, veladores, estantes",
-  "Instalación de racks",
-  "Servicio de pintura Latex interior y exterior"
+  "Servicio de pintura Latex interior y exterior",
+  "Instalacion de mobiliario",
+  "Instalación de racks"
 ];
 
 $('.pisos').data('categoria', pisos);
