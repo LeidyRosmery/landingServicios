@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +16,17 @@
     padding-left: 0px;
     overflow: hidden;
   }
+
+  .mainSectionWithBanner,
+  .newMainSection {
+    margin-top: 0;
+  }
+
+  #main.newMainSection>.container .col-md-12 {
+    padding: 0;
+  }
 </style>
+
 <body>
   <main id="main" class="newMainSection">
     <div class="container">
@@ -23,13 +34,19 @@
         <div class="wrapper-servicios">
           <div class="header-servicios">
             <div class="row">
+              <div class="portada-movil portada-img hidden-sm txt-center">
+                <div class="txt-portada txt-center">
+                  <p class="text-center">SERVICIOS HOGAR</p>
+                </div>
+              </div>
+              <div class="portada-desktop portada-img hidden-xs  txt-center">
+                <div class="txt-portada txt-center">SERVICIOS HOGAR</div>
+              </div>
               <div class="text-center col-md-12 col-xs-12">
-                <img class="img-responsive visible-xs visible-sm" src="assets/img/portada-deskop.png" alt="Barner nuestras tiendas">
-                <img class="img-responsive hidden-xs hidden-sm" src="assets/img/portada-deskop.png" alt="Barner nuestras tiendas">
                 <div class="txt-header text-center">
-                  <p>Los <span class="txt-blue title-header ">SERVICIOS</span> se realizaran en maximo <span class="txt-blue title-header "> 48 HRS.</span> </p>
+                  <p>Los <span class="txt-blue title-header title-desktop">SERVICIOS</span> se realizaran en maximo <span class="txt-blue title-header title-desktop "> 48 HRS.</span> </p>
                   <p>posterior a la entrega del producto</p>
-                  <h4 class="txt-blue-title title-header "> CATEGORIAS</h4>
+              <h4 class="txt-blue-title title-header">CATEGORIAS</h4>
                 </div>
               </div>
             </div>
@@ -38,7 +55,7 @@
             <div class="row">
               <div class="col-cont col-xs-6 col-md-4 col-lg-4 ">
                 <div class="exterior img-servicio" data-id='1'>
-                  <div class="text-center">
+                  <div class="cont-img text-center">
                     <img class="img-responsive" src="assets/img/exterior.png" alt="">
                   </div>
                   <span class="title-item">Exterior</span>
@@ -46,31 +63,41 @@
               </div>
               <div class="col-cont col-xs-6 col-md-4 col-lg-4 ">
                 <div class="electricidad text-center img-servicio" data-id='2' data-categoria="electricidad">
-                  <img class="img-responsive" src="assets/img/electricidad.png" alt="">
+                  <div class="cont-img text-center">
+                    <img class="img-responsive" src="assets/img/electricidad.png" alt="">
+                  </div>
                   <span class="title-item">Electricidad</span>
                 </div>
               </div>
               <div class="col-cont col-xs-6 col-md-4 col-lg-4 ">
                 <div class="pisos text-center img-servicio" data-id='3' data-categoria="pisos">
-                  <img class="img-responsive" src="assets/img/pisos.png" alt="">
+                  <div class="cont-img text-center">
+                    <img class="img-responsive" src="assets/img/pisos.png" alt="">
+                  </div>
                   <span class="title-item">Pisos</span>
                 </div>
               </div>
               <div class="col-cont col-xs-6 col-md-4 col-lg-4 ">
                 <div class="puertas text-center img-servicio" data-id='4' data-categoria="puertas">
-                  <img class="img-responsive" src="assets/img/puerta.png" alt="">
+                  <div class="cont-img text-center">
+                    <img class="img-responsive" src="assets/img/puerta.png" alt="">
+                  </div>
                   <span class="title-item">Puerta/Ventana</span>
                 </div>
               </div>
               <div class="col-cont col-xs-6 col-md-4 col-lg-4 ">
                 <div class="cocina text-center  img-servicio" data-id='5' data-categoria="cocina">
-                  <img class="img-responsive" src="assets/img/cocina.png" alt="">
+                  <div class="cont-img text-center">
+                    <img class="img-responsive" src="assets/img/cocina.png" alt="">
+                  </div>
                   <span class="title-item">Cocina / Baño</span>
                 </div>
               </div>
               <div class="col-cont col-xs-6 col-md-4 col-lg-4 ">
                 <div class="deco text-center img-servicio" data-id='6' data-categoria="deco">
-                  <img class="img-responsive" src="assets/img/muebles.png" alt="muebles">
+                  <div class="cont-img text-center">
+                    <img class="img-responsive" src="assets/img/muebles.png" alt="muebles">
+                  </div>
                   <span class="title-item">Mueble / Deco </span>
                 </div>
               </div>
@@ -86,4 +113,5 @@
   <script type="text/javascript" src="assets/js/main.js">
   </script>
 </body>
+
 </html>
